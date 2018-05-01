@@ -5,10 +5,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prebuild": "gulp build.sass",
+    "prebuild": "gulp build.sass && gulp build.sass",
     "build": "ng build --prod",
-    "prebuild-dev": "gulp build.sass --deploy-url=http://dev.minds.io",
-    "build-dev": "ng build",
+    "prebuild-dev": "gulp build.sass --deploy-url=/ && gulp build.sass --deploy-url=/",
+    "build-dev": "ng build -dop=false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
